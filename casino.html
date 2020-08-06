@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Casino Online</title>
+    <link rel="stylesheet" href="casino.css">
+</head>
+<body>
+    <header>
+        <div id="intro">La chance sourit aux audacieux</div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://www.casino.fr">Contact</a></li>
+            <li><a href="https://www.blog-casino.com">Notre Blog</a></li>
+            <li><a href="https://www.casino-games.com">Other Games</a></li>
+            <li><a href="https://www.infos-casino.com">About us</a></li>
+        </ul>
+    </nav>
+    <main>
+                    <h2>• Si l'ordinateur tire 0, la mise est perdu.</h2>
+                    <h2>• Si l'ordinateur tire le numéro que vous avez choisit, il vous rend votre mise plus 35 fois sa
+                      valeur.</h2>
+                    <h2>• Si l'ordinateur tire un numéro pair et que vous avez choisi « Pair », il vous rend votre mise plus 1
+                      fois cela•</h2 >         
+                    <h2>• Si l'ordinateur tire un numéro impair et que vous avez choisi « Impair », il vous rend votre mise plus 1
+                            fois cela•</h2>         
+            <div class="">
+                    <label for="solde" id="solde-name">SOLDE</label>
+                    <input type="number" name="solde" value=100 id="solde" disabled>
+                    <label for="default-value" id="perte-name">PERTE</label>
+                    <input type="number" name="perte" value="0" id="perte" disabled>
+                  </div>
+                  <div id="form">
+                  <div id="debut">
+                        <label for="select" class="mise-choix-name">Votre choix</label>
+                        <select class="select" name="select" id="select" required>
+                          <div class="">
+                            <option></option>
+                            <option value="Pair">pair</option>
+                            <option value="Impair">impair</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                          </div>
+                        </select>
+                        </div>
+                        <div>
+                        <label for="mise" class="mise-choix-name">Votre mise</label>
+                        <input type="number" id="mise" name="mise" value="1" min="1" placeholder="FCFA" class="input-text" required>
+                      </div>
+                            <button  id="input-submit" onclick="pari()">Go !</button>
+              </div>
+              <script>
+                var solde = 100;
+                var perte = 0;
+                function pari() {
+                var perdu = false;
+                var pari = document.getElementById("select").value;
+                var mise = parseInt(document.getElementById("mise").value);
+                if (solde == 0) {
+                    alert("Votre solde est insuffisant");
+                        } else if (mise > solde) {
+                            alert("La somme misée est supérieure à celle de votre solde");
+                            } else {
+                            var gain = 0;
+                            solde -= mise;
+                            var resultat = Math.round(Math.random() * 36);
+                             if (resultat == 0) {
+                              perdu = true;
+                             } else if (resultat == pari) {
+                              gain = mise + mise * 35;
+                               } else if (
+                              (pari == "Pair" && resultat % 2 == 0) ||
+                               (pari == "Impair" && resultat % 2 != 0)
+                              ) {
+                               gain = mise + mise;
+                             } else {
+                               perdu = true;
+                            }
+                           if (perdu) {
+                          alert( "Le nombre gagnant est  " +  resultat + "\nVous venez de perdre  " + mise +" mille frcs" );
+                         perte = perte + mise; 
+                            } else {
+                          alert("  Le nombre gagnant est  : " + resultat + "\nVous avez gagné : " + gain+" mille frcs" );
+                        solde += gain;
+                         }
+                        document.getElementById("solde").value = solde;
+                        document.getElementById("perte").value = perte;
+                        }
+                        }
+              </script>
+    </main>
+</body>
+<footer>
+    <p>© 2020 Casino's Owner : Mr Preira</p>
+</footer>
+</html>

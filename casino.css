@@ -1,0 +1,165 @@
+body{
+    background-image: url("base.jpg");
+    background-repeat: no-repeat;
+  background-size: cover;
+  font-family: serif;
+}
+nav ul{
+    padding:0px;
+    margin: 0px;
+    list-style-type: none;
+    background-color: rgb(197, 62, 62);
+}
+nav li{
+    display: inline-block;
+    width: 329px;
+    height: 40px;
+    border-right: 1px solid #000000;
+    text-align: center;
+    line-height: 30px;
+}
+nav li:hover{
+    background-color: rgb(240, 206, 12);
+}
+nav li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+}
+main{
+    padding: 350px;
+}
+header{
+    padding:50px;
+}
+#intro{
+    font-size: 50px;
+    text-align: center;
+    text-shadow: red 3px 3px 1px;
+    border-style: double;
+    border-color: rgb(219, 216, 12);
+    border-width: 5px;
+    box-shadow: rgb(219, 216, 12) 2px 2px;
+}
+#debut{
+    margin: 10px;
+    font-size: 30px;
+    text-shadow:  rgb(219, 216, 12) 3px 3px 1px;
+}
+select option{
+    font-size: 20px;
+}
+select{
+    font-size: 20px;
+}
+#input-submit{
+   height: 30%;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    background: rgb(2, 68, 144);
+    opacity: 0,7;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: 1s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(1,.11,.22,1.41);
+    transition-delay: 0.001s;
+    margin-left: 65%;
+  }
+  #input-submit:hover{
+    color: #fff;
+    background-color: rgb(198, 210, 30);
+  }
+  #mise{
+    font-size: 20px;
+    margin-top: none;
+    max-width: 150px;
+  }
+  .mise-choix-name{
+    font-size: 25px;
+    text-shadow:  rgb(219, 216, 12) 3px 3px 1px;
+    margin-top: 10px;
+  }
+  #solde-name{
+    color: rgb(238, 255, 5);
+    font-size: 30px;
+    margin-left: 10px;
+    float: left;
+    margin-top: 12px;
+}
+#form{
+  width: 700px;
+  height: 500px;
+  margin:auto;
+  background-color: var(--form_bg);
+  border-radius: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5vw;
+  padding: 5vh 15px;
+}
+#solde{
+  max-width: 100px;
+  margin-top: 10px;
+  border-radius: 15px;
+  background-color: #000;
+  color:rgb(238, 255, 5);
+  font-size: 30px;
+  text-align: center;
+
+}
+
+#perte-name{
+    color:rgb(172, 1, 1);
+  font-size: 30px;
+  align-content: stretch;
+  margin-left: 30%;
+  border-radius: 10px;
+  
+}
+
+#perte{
+  max-width: 100px;
+  margin-top: 0px;
+  border-radius: 15px;
+  background-color: #000;
+  color: red;
+  font-size: 30px;
+  text-align: center;
+}  
+
+  #guide{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    padding: 10% 5%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input-text{
+    width: 35%;
+    box-sizing: border-box;
+    padding: 12px 5px;
+    background:none;
+    border-radius: 25px;
+    outline: none;
+    color: #000;
+    margin:5px;
+    font-weight: bold;
+    margin-top: 25px;
+  }
