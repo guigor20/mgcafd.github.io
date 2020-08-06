@@ -1,6 +1,7 @@
 body{
     background-image: url("base.jpg");
     background-repeat: no-repeat;
+    background-attachement:fixed;
   background-size: cover;
   font-family: serif;
 }
